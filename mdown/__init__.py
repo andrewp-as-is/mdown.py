@@ -1,8 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import public
+__all__ = ['header', 'image', 'code', 'table']
 
-EXTENSIONS = [".markdown", ".mdown", ".mkdn", ".md", ".mkd", ".mdwn", ".mdtxt", ".mdtext"]
+
+EXTENSIONS = [".markdown", ".mdown", ".mkdn",
+              ".md", ".mkd", ".mdwn", ".mdtxt", ".mdtext"]
 
 
 def _format(formula, **kwargs):
@@ -12,13 +12,11 @@ def _format(formula, **kwargs):
     return formula.format(**data)
 
 
-@public.add
 def header(title, lvl):
     """return string with markdown header"""
     return "%s %s" % ("#" * int(lvl), title.rstrip())
 
 
-@public.add
 def image(url, link='', title='', alt=''):
     """return string with markdown image"""
     formula = '![{alt}]({url} "{title}")' if title else '![{alt}]({url})'
@@ -26,7 +24,6 @@ def image(url, link='', title='', alt=''):
     return _format(formula, url=url, link=link, title=title, alt=alt)
 
 
-@public.add
 def code(code, language=None):
     """return string with markdown code block"""
     return _format("""```{language}
@@ -34,7 +31,6 @@ def code(code, language=None):
 ```""", code=code, language=language)
 
 
-@public.add
 def table(headers, matrix):
     """return string with markdown table (one-line cells only)"""
     def line1(string):

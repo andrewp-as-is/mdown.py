@@ -1,24 +1,16 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
 
-[![](https://img.shields.io/pypi/pyversions/mdown.svg?longCache=True)](https://pypi.org/project/mdown/)
-[![](https://img.shields.io/pypi/v/mdown.svg?maxAge=3600)](https://pypi.org/project/mdown/)
-[![Travis](https://api.travis-ci.org/looking-for-a-job/mdown.py.svg?branch=master)](https://travis-ci.org/looking-for-a-job/mdown.py/)
 
-#### Installation
+[![](https://img.shields.io/pypi/v/mdown.svg?maxAge=3600)](https://pypi.org/project/mdown/)
+[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/mdown.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/mdown.py/actions)
+
+### Installation
 ```bash
 $ [sudo] pip install mdown
 ```
-
-#### Functions
-function|`__doc__`
--|-
-`mdown.code(code, language=None)` |return string with markdown code block
-`mdown.header(title, lvl)` |return string with markdown header
-`mdown.image(url, link='', title='', alt='')` |return string with markdown image
-`mdown.table(headers, matrix)` |return string with markdown table (one-line cells only)
 
 #### Examples
 **header**
@@ -49,5 +41,5 @@ cell21|cell22'
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>
